@@ -1,0 +1,105 @@
+* {box-sizing: border-box}
+body {
+  background: #fff;
+  font-family: 'open sans', sans-serif;
+  color: #000;
+}
+
+
+/* Hiding the trigger checkbox */
+input[type=checkbox] {display: none;}
+
+/* Centering the forms */
+.form-wrapper {
+  display: flex;
+   align-items: center; 
+   justify-content: center;
+   margin-top: 300px;
+  
+}
+
+
+form {
+  position: absolute; /* make forms overlap each other */
+  /* dmin-width: 100%;
+  min-width: 750px;
+  max-width: 100%; */
+  transition: opacity 1s;
+}
+
+
+
+/* Custom Styling
+********************/
+
+input {
+  display: block;
+  width: 100%;
+  height: 25px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+ input, .btn {
+  color: #000;
+  background: initial;
+  border: 1px solid #000;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.btn {
+  cursor: pointer;
+  width: 40%;
+  transition: background .3s ease-in;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.fake {
+  display: block;
+  padding: 4px;
+  width: 55%;
+  float: right;
+  text-align: center;
+}
+
+
+#sign-up .btn {
+  margin: auto;
+  width: 100%;
+}
+
+.fake-link {
+  display: block;
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 20px ;
+}
+
+/* Sign in form on top sign up */
+#sign-in {z-index: 1;}
+
+/* Hiding the sign up form */
+#sign-up {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* If triger is checked hide Sign in form and show sign up */
+input[type=checkbox]:checked ~ #sign-in {
+  opacity: 0;
+  visibility: hidden;
+}
+input[type=checkbox]:checked ~ #sign-up {
+  opacity: 1;
+  visibility: visible;
+}
+
+.insignup{
+  display: flex;
+  
+}
